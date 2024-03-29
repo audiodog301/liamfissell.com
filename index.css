@@ -1,0 +1,161 @@
+* { box-sizing: inherit; }
+
+body {
+    font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    box-sizing: border-box;
+    background-color: #ffebee;
+    margin: 0;
+    padding-top: 10px;
+}
+
+nav, main, h1 {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+nav, h1 {
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+}
+
+nav {
+    transform: rotate(1deg);
+    background-color: #f4d7db;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+nav a {
+    display: block;
+    padding: 6px 10px;
+    color: #7c3838;
+    text-decoration: underline;
+}
+
+nav a:hover {
+    background-color: #eec7c7;
+}
+
+nav a.active {
+    color: #ffffff;
+    background-color: #a16d6d;
+}
+
+h1 {
+    color: #ad6666;
+    font-weight: 200;
+    line-height: 0.8;
+    font-size: 4.5rem;
+    margin-bottom: -5px;
+}
+
+.deskew {
+    transform: rotate(-1.2deg);
+}
+
+main {
+    background-color: #ffffff;
+    padding: 40px 10px;
+    line-height: 1.6;
+}
+
+main > * {
+    transform: rotate(1.2deg);
+}
+
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	-webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;
+}
+
+a {
+    color: #7c3838;
+}
+
+iframe {
+    border: 0;
+    width: 100%;
+}
+
+@media (max-width: 500px) {
+    body { padding-top: 0; }
+    .deskew, nav, main > * { transform: rotate(0deg); }
+    main { padding: 20px 10px; }
+    nav a { padding: 10px 16px; }
+}
+
+::selection {
+    background-color: #a16d6d;
+    color: #ffffff;
+}
+
+/* - - - works: - - - */
+
+.work {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.work div:first-child {
+    flex: 4;
+}
+
+.work div:last-child {
+    flex: 3;
+    margin: auto;
+    width: 100%;
+    padding-top: 6px;
+}
+
+.work h2, .work-standalone .title {
+    font-size: 1em;
+    margin: 0;
+    font-weight: normal;
+}
+
+.work h2 span, .work-standalone .title span {
+    font-weight: bold;
+}
+
+.work .arrangement, .work-standalone .arrangement {
+    margin: 0;
+    font-style: italic;
+}
+
+.work p, .work-standalone p {
+    margin: 0;
+    margin-top: 16px;
+}
+
+.work-standalone .back {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.work-standalone .vimeo {
+    /* margin-top: 40px; */
+    /* max-width: 600px; */
+    display: block;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
