@@ -1,0 +1,84 @@
+body {
+    background-image: linear-gradient(rgb(0, 0, 77), black);
+    color: white;
+    padding: 0%;
+}
+
+div {
+    padding: 0%;
+    margin: 0%;
+}
+
+img { 
+    image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+    image-rendering: -moz-crisp-edges;          /* Firefox                        */
+    image-rendering: -o-crisp-edges;            /* Opera                          */
+    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+    image-rendering: pixelated;                 /* Universal support since 2021   */
+    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+}
+img.star {
+    width: 100%;
+    margin-top: -17%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 5;
+}
+
+div.hov {
+    z-index: 1;
+    position: absolute;
+    display: inline;
+    background: linear-gradient(black, rgb(0, 0, 77));
+    margin-left: 50%;
+    margin-top: 17%;
+    margin-right: 7%;
+    margin-bottom: auto;
+    width: 43%;
+    height: 50%;
+}
+
+div.hov::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(0, 0, 77), pink);
+    opacity: 0;
+    transition: opacity 0.4s;
+    z-index: -1;
+}
+
+div.hov:hover::before {
+    opacity: 1;
+}
+
+p {
+    background: darkorchid;
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+    z-index: -2;
+    margin-left: 7%;
+    margin-right: -1%;
+    margin-top: 2%;
+    padding-right: 0%;
+}
+
+img.st {
+    filter: saturate(0);
+    position: absolute;
+    opacity: 0.3;
+    bottom: 0;
+    left: 0;
+    display: inline;
+    margin-left: 0%;
+    transition: opacity 0.4s;
+}
+
+img.st:hover {
+    opacity: 0;
+}
