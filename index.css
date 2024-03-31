@@ -78,18 +78,18 @@ img {
 
 main {
     background-color: #ffffff;
-    padding: 10px 10px;
+    padding: 20px 10px;
     line-height: 1.6;
 }
 
-main > * {
+.main-items-container > * {
     transform: rotate(1.2deg);
 }
 
 .spaced-stack {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
 }
 
 .sr-only {
@@ -202,7 +202,7 @@ footer, footer a {
 .article {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
     margin: 20px 0;
 }
 
@@ -215,9 +215,8 @@ footer, footer a {
 
 .article p {
     margin: 0;
-    margin-top: -15px;
 }
 
-.quote {
+blockquote {
     text-align: right;
 }
